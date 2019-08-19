@@ -11,4 +11,4 @@ services:
     volumes:
       - "${REMOTE_HOST_HOME}/simple-react-app/master/src:/usr/src/app/src"
     ports:
-      - 3000:3000
+      - ${REMOTE_PORT}:3000
