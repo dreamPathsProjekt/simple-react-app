@@ -9,6 +9,6 @@ services:
     image: simple-react-app:latest
     container_name: simple_react_app
     volumes:
-      - /home/ubuntu/simple-react-app/master/src:/usr/src/app/src
+      - "${REMOTE_HOST_HOME}/simple-react-app/master/src:/usr/src/app/src"
     ports:
       - 3000:3000
