@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  simple_react_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: develop
+    image: simple-react-app:latest
+    container_name: simple_react_app
+    volumes:
+      - /home/ubuntu/simple-react-app/master/src:/usr/src/app/src
+    ports:
+      - 3000:3000

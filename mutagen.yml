@@ -1,0 +1,15 @@
+sync:
+  simpleReactAppSrc:
+    alpha: "./src"
+    beta: "mutagen.demo:~/simple-react-app/master/src"
+    mode: "one-way-safe"
+    ignore:
+      vcs: true
+      paths:
+        - "./build/"
+        - "./node_modules/"
+
+forward:
+  simpleReactAppHttpDevServer:
+    source: "tcp:localhost:3000"
+    destination: "mutagen.demo:tcp:localhost:3000"
