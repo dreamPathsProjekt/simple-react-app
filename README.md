@@ -71,11 +71,10 @@ export DOCKER_API_VERSION=1.39
 ### Build the development image & prepare mutagen environment
 
 ```Bash
-# Locally
+# Every use of docker-compose and/or mutagen is performed from your local terminal
 docker-compose build simple_react_app
 
-# Remote using ssh
-mkdir -p ~/simple-react-app/master/
+ssh mutagen.demo 'mkdir -p ~/simple-react-app/master/'
 ```
 
 ### Create the mutagen forward connection and sync
