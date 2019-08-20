@@ -1,6 +1,7 @@
 version: '3.5'
 
 services:
+
   simple_react_app:
     build:
       context: .
@@ -12,3 +13,13 @@ services:
       - "${REMOTE_HOST_HOME}/simple-react-app/master/src:/usr/src/app/src"
     ports:
       - ${REMOTE_PORT}:3000
+
+  simple_react_app_production:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    image: simple-react-app:production
+    container_name: simple_react_app_prod
+    ports:
+      - 80:80

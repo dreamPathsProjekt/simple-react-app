@@ -73,6 +73,8 @@ export DOCKER_API_VERSION=1.39
 ```Bash
 # Every use of docker-compose and/or mutagen is performed from your local terminal
 docker-compose build simple_react_app
+# Build also the prod image for test
+docker-compose build simple_react_app_production
 
 ssh mutagen.demo 'mkdir -p ~/simple-react-app/master/'
 ```
@@ -83,10 +85,13 @@ ssh mutagen.demo 'mkdir -p ~/simple-react-app/master/'
 mutagen project start
 ```
 
-### Deploy the service
+### Deploy the development and/or production service
 
 ```Bash
-docker-compose up -d
+# Development listens on port 3000
+docker-compose up -d simple_react_app
+# Production listens on remote port 80, local 8001 (can be edited to your needs)
+docker-compose up -d simple_react_app_production
 ```
 
 - We have mounted remote host folder `~/simple-react-app/master/src` to container folder `/usr/src/app/src`. Because the sync created with mutagen is also syncing the same host folder with our local environment, any change to files inside our local `src/` directory will force the `webpack` dev server inside the container to __reload.__

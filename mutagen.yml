@@ -13,3 +13,6 @@ forward:
   simpleReactAppHttpDevServer:
     source: "tcp:localhost:3000"
     destination: "mutagen.demo:tcp:localhost:3000"
+  simpleReactAppProduction:
+    source: "tcp:localhost:8001"
+    destination: "mutagen.demo:tcp:localhost:80"
