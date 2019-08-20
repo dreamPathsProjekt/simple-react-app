@@ -23,8 +23,8 @@ NB: this is just front end, you can use whatever backend language you are most c
 
 ### Prerequisites
 
-- A remote dev machine with `Docker CE` installed, and access with private key.
-- `Mutagen` & `docker` client installed locally.
+- A remote dev machine with [Docker CE](https://docs.docker.com/install/linux/docker-ce/ubuntu/) installed, and access with private key.
+- [Mutagen](https://github.com/mutagen-io/mutagen) & `docker` client installed locally.
 - `docker-compose` installed locally. [Install docker-compose](https://docs.docker.com/compose/install/)
 
 ### Install Mutagen
